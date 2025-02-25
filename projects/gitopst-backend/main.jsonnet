@@ -6,10 +6,10 @@ local vars = import 'vars/vars.json';
 function(
   namespace='app-prod-3',
 )
-  local appName = 'gitops-demo-backend';
+  local appName = 'gitops-backend';
   local mapEnvVars = env.getMapEnv(namespace);
   local mapSecretVars = secret.getMapSecret(namespace);
-  local domain = 'api-<GROUP-NUMBER>.iamgraph.live';
+  local domain = 'api-group-<GROUP-NUMBER>.iamgraph.live';
 
   [
     {
@@ -132,4 +132,3 @@ function(
       },
     },
   ]
-
